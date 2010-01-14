@@ -15,8 +15,10 @@
 	</fileset>
 
 	<patternset id="package.bin.set" >
-		<include name="Castle.Components.Validator.dll" />
-		<include name="Castle.Components.Validator.xml" />
+		<include name="Castle.Components.Validator.*" />
+		<include name="**/*.resources.dll" />
+		<exclude name="Castle.Components.Validator.Tests.*" />
+		<exclude name="**/*.Tests.resources.dll" />
 	</patternset>
 
 	<patternset id="ndepend.bin.set" >
