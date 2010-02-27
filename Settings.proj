@@ -47,8 +47,14 @@ limitations under the License.
 		<!-- 
 		Specify additional items to package here, they are added to the package
 		in addition to automatically detected dependencies.
-		The items are resolved relative to $(OutputPath)
+
 		-->
+		<PackageFiles Include="$(OutputPath)**\Castle.Components.Validator.resources.dll" />
+
+		<!-- These are not packaged -->
+		<ExcludeFromPackageFiles
+			Include="$(OutputPath)Castle.DynamicProxy2*.*;$(OutputPath)Castle.Core*.*"
+			/>
 	</ItemGroup>
 
 

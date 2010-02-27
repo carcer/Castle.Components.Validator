@@ -415,12 +415,13 @@ limitations under the License.
 			<CopyToPackageDirectory Include="@(_ChangesTxt)">
 				<DestinationFolder>$(PackageDir)\ReleaseNotes</DestinationFolder>
 			</CopyToPackageDirectory>
+			
+			<CopyToPackageDirectory Remove="@(ExcludeFromPackageFiles)" />
 		</ItemGroup>
-
+		
 		<Copy
 			SourceFiles="@(CopyToPackageDirectory)"
-			DestinationFolder="%(CopyToPackageDirectory.DestinationFolder)"
-			Condition="Exists('%(FullPath)')"
+			DestinationFiles="@(CopyToPackageDirectory->'%(DestinationFolder)\%(RecursiveDir)%(Filename)%(Extension)')"
 			/>
 
 	</Target>
