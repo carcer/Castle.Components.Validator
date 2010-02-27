@@ -32,8 +32,6 @@ limitations under the License.
 	<!-- Project Properties -->
 	<PropertyGroup>
 		<ProjectName>Castle.Components.Validator</ProjectName>
-
-		<CLSCompliant>false</CLSCompliant>
 		
 		<!-- Versioning -->
 		<Project_Major>1</Project_Major>
