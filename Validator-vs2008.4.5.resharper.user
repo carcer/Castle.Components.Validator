@@ -1,0 +1,26 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="7D27CB27-9407-4445-8E2B-E61AE348B94A/f:Changes.txt/l:C!?dev?dotnet?castle?git?Castle.Components.Validator?Changes.txt" caret="0" fromTop="0" />
+      <File id="4C945D49-02E9-43F2-9202-E7A6E7C56E77/f:default.build" caret="0" fromTop="0" />
+      <File id="7D27CB27-9407-4445-8E2B-E61AE348B94A/f:Settings.proj/l:C!?dev?dotnet?castle?git?Castle.Components.Validator?Settings.proj" caret="1265" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7D27CB27-9407-4445-8E2B-E61AE348B94A/f:Settings.proj/l:C!?dev?dotnet?castle?git?Castle.Components.Validator?Settings.proj" caret="1437" fromTop="21" />
+      <File id="7D27CB27-9407-4445-8E2B-E61AE348B94A/f:Settings.proj/l:C!?dev?dotnet?castle?git?Castle.Components.Validator?Settings.proj" caret="1264" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>
