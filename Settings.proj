@@ -21,7 +21,7 @@ limitations under the License.
 ***********************************************************************************************
 -->
 
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="_InitializeDynamicProperties">
 
 	<!-- Root Path definition relative for actual build file -->
 	<PropertyGroup>
@@ -43,19 +43,18 @@ limitations under the License.
 
 	</PropertyGroup>
 	
-	<ItemGroup>
-		<!-- 
-		Specify additional items to package here, they are added to the package
-		in addition to automatically detected dependencies.
 
-		-->
-		<PackageFiles Include="$(OutputPath)**\Castle.Components.Validator.resources.dll" />
+	<Target Name="_InitializeDynamicProperties">
+		<PropertyGroup>
+			<!-- 
+			Specify additional items to package here, they are added to the package
+			in addition to automatically detected dependencies.
+			-->
+			<PackageFiles>$(OutputPath)**\Castle.Components.Validator.resources.dll</PackageFiles>
 
-		<!-- These are not packaged -->
-		<ExcludeFromPackageFiles
-			Include="$(OutputPath)Castle.DynamicProxy2*.*;$(OutputPath)Castle.Core*.*"
-			/>
-	</ItemGroup>
+			<ExcludeFromPackageFiles>$(OutputPath)Castle.DynamicProxy2*.*;$(OutputPath)Castle.Core*.*</ExcludeFromPackageFiles>
+		</PropertyGroup>
+	</Target>
 
 
 	<!-- Import framework version specific settings, like Settings-v3.5 or Settings-v4.0 -->
