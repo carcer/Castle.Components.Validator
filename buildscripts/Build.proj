@@ -399,7 +399,7 @@ limitations under the License.
 			<_CastleDependencies Include="$(OutputPath)Castle*.dll;$(OutputPath)Castle*.xml" Exclude="$(OutputPath)Castle*.Tests.dll"/>
 
 			<_BuildScriptsTxtFiles Include="$(BuildScriptsPath)\*.txt"/>
-			<_ChangesTxt Include="$(RootPath)\src\Change*.txt"/>
+			<_Txt Include="$(RootPath)\*.txt"/>			
 			
 			<_PackageFiles Include="$(PackageFiles)" />
 			<_ExcludeFromPackageFiles Include="$(ExcludeFromPackageFiles)" />
@@ -415,7 +415,7 @@ limitations under the License.
 				<DestinationFolder>$(PackageDir)\bin</DestinationFolder>
 			</CopyToPackageDirectory>
 
-			<CopyToPackageDirectory Include="@(_ChangesTxt)">
+			<CopyToPackageDirectory Include="@(_Txt)">
 				<DestinationFolder>$(PackageDir)\ReleaseNotes</DestinationFolder>
 			</CopyToPackageDirectory>
 			
